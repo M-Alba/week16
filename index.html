@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет стоимости автомобиля</title>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <main class="calc__wrapper">
+        <div class="container">
+            <form id="form" name="form">
+                <h1 class="calc__title">Выбери свой автомобиль LADA</h1>
+
+                <!-- Модель автомобиля -->
+                <div class="carModel__wrapper">
+                    <label for="carModel" class="carModel__label">Модель:</label>
+                    <select id="carModel">
+                        <option value="">Выберите модель</option>
+                        <option value="Granta">Granta</option>
+                        <option value="Vesta">Vesta</option>
+                        <option value="Largus">Largus</option>
+                    </select>
+                </div>
+
+                <!-- Тип кузова -->
+                <div class="carType__wrapper">
+                    <label for="carType" class="carType__label">Тип кузова:</label>
+                    <select id="carType" disabled="true">
+                        <option value="">Выберите тип кузова</option>
+                    </select>
+                </div>
+
+                <!-- Комплектация -->
+                <div>
+                    <h3 class="calc__subtitle">Комплектация</h3>
+                    <label>
+                        <input type="radio" name="equipment" value="1" checked />
+                        <span>classic</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="equipment" value="1.1" />
+                        <span>comfort</span>
+                    </label>
+                </div>
+
+                <!-- Двигатель, трансмиссия -->
+                <div class="carEngine__section">
+                    <h3 class="calc__subtitle">Двигатель, трансмиссия</h3>
+                    <label>
+                        <input type="radio" name="engine" value="1" checked />
+                        <span>1.6 Л 8-КЛ. (90 Л.С.), 5МТ</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="engine" value="1.02" />
+                        <span>1.6 Л 16-КЛ. (106 Л.С.), 5МТ</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="engine" value="1.03" />
+                        <span>1.6 Л 16-КЛ. (98 Л.С.), 4АТ</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="engine" value="1.04" />
+                        <span>1.6 Л 16-КЛ. (113 Л.С.), АТ</span>
+                    </label>
+                </div>
+
+                <!-- Цвет -->
+                <div>
+                    <h3 class="calc__subtitle">Цвет</h3>
+                    <div class="carColor__wrapper">
+                        <label class="carColor__item">
+                            <input type="radio" name="color" value="12000" />
+                            <div class="carColor__text">Красный сердолик - металлик
+                                <span class="carColor__comment">+12000 руб. к стоимости</span>
+                            </div>
+                        </label>
+                        <label class="carColor__item">
+                            <input type="radio" name="color" value="10000" />
+                            <div class="carColor__text">Ярко-синий - металлик
+                                <span class="carColor__comment">+10000 руб. к стоимости</span>
+                            </div>
+                        </label>
+                        <label class="carColor__item">
+                            <input type="radio" name="color" value="0" checked />
+                            <div class="carColor__text">Белый
+                                <span class="carColor__comment">без доплаты</span>
+                            </div>
+                        </label>
+                        <label class="carColor__item">
+                            <input type="radio" name="color" value="0" />
+                            <div class="carColor__text">Черный
+                                <span class="carColor__comment">без доплаты</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Дополнительные аксессуары -->
+                <div>
+                    <h3 class="calc__subtitle">Аксессуары</h3>
+                    <label class="carAccessories__wrapper">
+                        <input type="checkbox" name="ceramic" value="10813" />
+                        <div class="carAccessories__text">
+                            Керамическое покрытие
+                            <span class="carAccessories__comment">+ 10813.00 руб. к стоимости</span>
+                        </div>
+                    </label>
+                    <label class="carAccessories__wrapper">
+                        <input type="checkbox" name="motoristSet" value="2730" />
+                        <div class="carAccessories__text">
+                            Набор автомобилиста (стандарт)
+                            <span class="carAccessories__comment">+ 2730.00 руб. к стоимости</span>
+                        </div>
+                    </label>
+                    <label class="carAccessories__wrapper">
+                        <input type="checkbox" name="parkingSystem" value="5988" />
+                        <div class="carAccessories__text">
+                            Система помощи при парковке
+                            <span class="carAccessories__comment">+ 5988.00 руб. к стоимости</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- Стоимость автомобиля -->
+                <div class="calcPrice">
+                    <div class="calcPrice__title">Стоимость автомобиля:</div>
+                    <div class="calcPrice__value">
+                        <span id="totalPrice">0</span>
+                        рублей
+                        </divs=>
+                    </div>
+                    <!-- // Стоимость ремонта -->
+            </form>
+        </div>
+    </main>
+    <script src="./assets/scripts/index.js">
+    </script>
+</body>
+
+</html>
